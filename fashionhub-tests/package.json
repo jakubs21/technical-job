@@ -4,7 +4,10 @@
   "scripts": {
     "test:local": "cross-env TEST_ENV=local playwright test",
     "test:staging": "cross-env TEST_ENV=staging playwright test",
-    "test:prod": "cross-env TEST_ENV=prod playwright test"
+    "test:prod": "cross-env TEST_ENV=prod playwright test",
+    "test:prod:chromium": "cross-env TEST_ENV=prod playwright test --project=chromium",
+    "test:prod:firefox": "cross-env TEST_ENV=prod playwright test --project=firefox",
+    "test:prod:webkit": "cross-env TEST_ENV=prod playwright test --project=webkit"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0",

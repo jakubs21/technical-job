@@ -1,4 +1,5 @@
 import { Page, expect } from '@playwright/test';
+import { LoginLocators } from './LoginLocators';
 
 export class LoginPage {
   constructor(private page: Page) {}
@@ -9,9 +10,9 @@ export class LoginPage {
   }
 
   async login(username: string, password: string) {
-    await this.page.fill('#username', username);
-    await this.page.fill('#password', password);
-    await this.page.click('input[type="submit"]');
+    await this.page.fill(LoginLocators.username, username);
+    await this.page.fill(LoginLocators.password, password);
+    await this.page.click(LoginLocators.submit);
   }
 
   async assertWelcomeMessage(username: string) {
