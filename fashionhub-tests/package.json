@@ -1,0 +1,17 @@
+{
+  "name": "fashionhub-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test:local": "cross-env TEST_ENV=local playwright test",
+    "test:staging": "cross-env TEST_ENV=staging playwright test",
+    "test:prod": "cross-env TEST_ENV=prod playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^25.6.0",
+    "allure-commandline": "^2.38.1",
+    "allure-playwright": "^3.7.1",
+    "cross-env": "^10.1.0",
+    "typescript": "^5.0.0"
+  }
+}
